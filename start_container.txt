@@ -1,0 +1,1 @@
+$ docker run -itv ${host_project_root}:${container_WORKDIR} ${image id} /bin/bash
