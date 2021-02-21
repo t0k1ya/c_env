@@ -3,7 +3,7 @@
 ### 起動方法
 1. イメージをビルド
 ```
-$ docker build -t ${tag_name}
+$ docker build -t ${tag_name} .
 ```
 2. コンテナ起動＆コンテナ内にアクセス
 ```
