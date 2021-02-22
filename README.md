@@ -7,6 +7,6 @@ $ docker build -t ${tag_name} .
 ```
 2. コンテナ起動＆コンテナ内にアクセス
 ```
-$ docker run -itv ${host_project_root}:${container_WORKDIR} ${image_id} /bin/bash
+$ docker run -itv ${HOST_PROJECT_ROOT_PATH}:${CONTAINER_WORKDIR} ${IMAGE_ID} /bin/bash
 ```
 
