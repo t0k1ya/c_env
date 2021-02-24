@@ -10,3 +10,8 @@ $ docker build -t ${tag_name} .
 $ docker run -itv ${HOST_PROJECT_ROOT_PATH}:${CONTAINER_WORKDIR} ${IMAGE_ID} /bin/bash
 ```
 
+### ファイル実行方法
+```
+$ cd ${c_env/src}
+$ sh run.sh ${ファイル名}
+```
