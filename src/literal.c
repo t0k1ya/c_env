@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main() {
+int main() {
   /* 文字列 */
   printf("hello world\n");
 
