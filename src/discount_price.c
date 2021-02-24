@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-int getDiscount(int price, int i) {
-  return (int)price * (1 - i * 0.1);
-}
+/* プロトタイプ宣言 */
+int getDiscount(int, int);
 
 int main() {
   /*
@@ -12,4 +11,8 @@ int main() {
   scanf("%d", &price);
 
   printf("1割引: %d\t3割引: %d\t5割引: %d\n", getDiscount(price, 1), getDiscount(price, 3), getDiscount(price, 5));
+}
+
+int getDiscount(int price, int i) {
+  return (int)price * (1 - i * 0.1);
 }
