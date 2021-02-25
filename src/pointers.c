@@ -47,10 +47,23 @@ int main() {
   /* valueのアドレスを渡す */
   func(&value);
   printf("value = %d\n", value);
-  
+
+  /*
+   * 配列とポインタ
+   * 配列を関数に渡す際は、そのアドレスを渡している
+   */
+  int edit_array_of(int i, int data[]);
+  int avr, array[5] = {83, 12, 61, 40, 77};
+  printf("array[4]: %d\n", array[4]);
+  avr = edit_array_of(4, array);
+  printf("array[4]: %d\n", array[4]);
 }
 
 void func(int *pval) {
   printf("pvalのアドレス = %p\n", pval);
   *pval = 100;
+}
+
+int edit_array_of(int i, int data[]) {
+  return data[i] = 0;
 }
