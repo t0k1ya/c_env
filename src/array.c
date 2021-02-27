@@ -6,6 +6,9 @@ int main() {
   int arr[] = { 1, 2, 3 };
   /* intは4バイト(32ビット) */
   printf("intは%dバイト\n", sizeof(int));
+  printf("arrのアドレス: %p\n", arr);
+  printf("arrのアドレス: %p\n", &arr[0]);
+  printf("arrのアドレス: %p\n", &arr[1]);
   /* 
    * sizeof()は配列、変数のサイズを取得できる
    * なので、int型配列の要素数を求めるには以下のようにする

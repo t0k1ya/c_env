@@ -23,6 +23,7 @@ struct tom {
   } student;
 
 void give_value(student data);
+void give_value2(student *p_data);
 
 int main() {
   /* 構造体タグの変数を宣言: struct 構造体の型名 変数名 */
@@ -37,9 +38,19 @@ int main() {
   /* 関数に渡される構造体はコピーなので、関数内で構造体を操作しても元の構造体に影響はない */
   printf("%d\n", data.age);
 
+  /* ただし、構造体のポインタ変数を渡すと元の構造体の値も変わる */
+  student *p_data, org_data;
+  p_data = &org_data;
+  give_value2(p_data);
+  printf("%d\n", p_data->age);
 }
 
 void give_value(student data) {
   data.age = 22;
   printf("%d\n", data.age);
+}
+
+void give_value2(student *p_data) {
+  p_data->age = 22;
+  printf("%d\n", p_data->age);
 }
